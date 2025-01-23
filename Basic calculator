@@ -1,0 +1,52 @@
+/// Basic calculator code
+import java.util.Scanner;
+
+class Main{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+System.out.println("Heeha , welcome");
+System.out.println("*****************");
+System.out.println("What u want 2 do man !: ");
+System.out.println("1. ( + )");
+System.out.println("2. ( - )");
+System.out.println("3. ( * )");
+System.out.println("4. ( / )");
+
+System.out.println("Enter ur choice(1-4): ");
+int choice=sc.nextInt();
+
+System.out.println("First number: ");
+double num1= sc.nextDouble();
+System.out.println("Second number: ");
+double num2= sc.nextDouble();
+
+double result;
+switch (choice){
+case 1 :
+result=num1+num2;
+System.out.println("Result: "+ result);
+break;
+case 2 :
+if(num1>num2){
+result=num1-num2;
+} else{
+System.out.println("sorry bhai, we ain't negative man");
+}
+break;
+case 3:
+result=num1*num2;
+System.out.println("Result: "+result);
+break;
+case 4:
+if(num2!=0){
+result=num1/num2;
+System.out.println("Result: " + result);
+} else {
+System.out.println("That's illegal man");
+}
+break;
+default:
+System.out.println("-_-");
+}
+sc.close();
+}}
